@@ -72,6 +72,35 @@
     window.open(url, '_blank', 'noopener,noreferrer');
   });
 
+  // Álbum de lembranças: ampliação, navegação e retorno pelo Esc.
+  const photoDialog = document.getElementById('photo-dialog');
+  const expandedPhoto = document.getElementById('expanded-photo');
+  const photoCount = document.getElementById('photo-count');
+  const photos = Array.from(document.querySelectorAll('.photo-card'));
+  const memoryVideo = document.getElementById('memory-video');
+  let selectedPhoto = 0;
+  function viewPhoto(index) {
+    selectedPhoto = (index + photos.length) % photos.length;
+    const photo = photos[selectedPhoto].querySelector('img');
+    expandedPhoto.src = photo.src;
+    expandedPhoto.alt = photo.alt;
+    photoCount.textContent = `${selectedPhoto + 1} / ${photos.length}`;
+  }
+  photos.forEach((photo, i) => photo.addEventListener('click', () => {
+    memoryVideo.pause();
+    viewPhoto(i);
+    if (!photoDialog.open) photoDialog.showModal();
+  }));
+  document.getElementById('close-photo').addEventListener('click', () => photoDialog.close());
+  document.getElementById('photo-prev').addEventListener('click', () => viewPhoto(selectedPhoto - 1));
+  document.getElementById('photo-next').addEventListener('click', () => viewPhoto(selectedPhoto + 1));
+  photoDialog.addEventListener('click', (event) => { if (event.target === photoDialog) photoDialog.close(); });
+  photoDialog.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') { event.preventDefault(); viewPhoto(selectedPhoto - 1); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); viewPhoto(selectedPhoto + 1); }
+  });
+  document.getElementById('back-music').addEventListener('click', () => memoryVideo.pause());
+
   // Pequenos pontos cintilantes desenhados em CSS: sem bibliotecas ou downloads.
   const stars = document.getElementById('stars');
   for (let i = 0; i < 45; i++) {

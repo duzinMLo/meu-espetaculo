@@ -72,9 +72,35 @@
           <button class="pixel-button music-button" type="button" id="spotify-btn">♫ &nbsp; Ouvir o que não consegui dizer</button>
           <p class="signature">Com carinho, de alguém que quis tornar todos os momentos com você especiais</p>
         </div>
+          <section class="memories" aria-labelledby="memories-title">
+            <div class="memories-heading"><span aria-hidden="true">✿ &nbsp; ✦ &nbsp; ✿</span><h3 id="memories-title">Nossas lembranças</h3></div>
+            <div class="photo-grid" id="photo-grid">
+              <button class="photo-card" type="button" data-photo="1" aria-label="Ampliar foto 1 de 8"><span class="photo-frame"><img src="assets/fotos/memoria-01.webp" loading="lazy" alt="Fotografia de uma lembrança compartilhada, 1 de 8" decoding="async"></span><span class="photo-number">✿ 01</span></button>
+              <button class="photo-card" type="button" data-photo="2" aria-label="Ampliar foto 2 de 8"><span class="photo-frame"><img src="assets/fotos/memoria-02.webp" loading="lazy" alt="Fotografia de uma lembrança compartilhada, 2 de 8" decoding="async"></span><span class="photo-number">✿ 02</span></button>
+              <button class="photo-card" type="button" data-photo="3" aria-label="Ampliar foto 3 de 8"><span class="photo-frame"><img src="assets/fotos/memoria-03.webp" loading="lazy" alt="Fotografia de uma lembrança compartilhada, 3 de 8" decoding="async"></span><span class="photo-number">✿ 03</span></button>
+              <button class="photo-card" type="button" data-photo="4" aria-label="Ampliar foto 4 de 8"><span class="photo-frame"><img src="assets/fotos/memoria-04.webp" loading="lazy" alt="Fotografia de uma lembrança compartilhada, 4 de 8" decoding="async"></span><span class="photo-number">✿ 04</span></button>
+              <button class="photo-card" type="button" data-photo="5" aria-label="Ampliar foto 5 de 8"><span class="photo-frame"><img src="assets/fotos/memoria-05.webp" loading="lazy" alt="Fotografia de uma lembrança compartilhada, 5 de 8" decoding="async"></span><span class="photo-number">✿ 05</span></button>
+              <button class="photo-card" type="button" data-photo="6" aria-label="Ampliar foto 6 de 8"><span class="photo-frame"><img src="assets/fotos/memoria-06.webp" loading="lazy" alt="Fotografia de uma lembrança compartilhada, 6 de 8" decoding="async"></span><span class="photo-number">✿ 06</span></button>
+              <button class="photo-card" type="button" data-photo="7" aria-label="Ampliar foto 7 de 8"><span class="photo-frame"><img src="assets/fotos/memoria-07.webp" loading="lazy" alt="Fotografia de uma lembrança compartilhada, 7 de 8" decoding="async"></span><span class="photo-number">✿ 07</span></button>
+              <button class="photo-card" type="button" data-photo="8" aria-label="Ampliar foto 8 de 8"><span class="photo-frame"><img src="assets/fotos/memoria-08.webp" loading="lazy" alt="Fotografia de uma lembrança compartilhada, 8 de 8" decoding="async"></span><span class="photo-number">✿ 08</span></button>
+            </div>
+            <div class="video-frame">
+              <p class="video-label">✦ Uma lembrança em movimento ✦</p>
+              <video id="memory-video" controls playsinline preload="metadata" aria-label="Vídeo de lembrança" controlslist="nodownload">
+                <source src="assets/video/lembranca.mp4" type="video/mp4">
+                Seu navegador não oferece suporte à reprodução deste vídeo.
+              </video>
+            </div>
+          </section>
+
       </section>
     </main>
     <footer class="footer"><span id="chapter-indicator">01 / 03</span><span class="footer-flower" aria-hidden="true">✿</span><span>MEU ESPETÁCULO</span></footer>
+    <dialog class="photo-dialog" id="photo-dialog" aria-label="Foto ampliada">
+      <button class="close-photo" id="close-photo" type="button" aria-label="Fechar foto ampliada">✕</button>
+      <img id="expanded-photo" alt="Fotografia ampliada">
+      <div class="photo-nav"><button id="photo-prev" type="button" aria-label="Foto anterior">‹ Anterior</button><span id="photo-count">1 / 8</span><button id="photo-next" type="button" aria-label="Próxima foto">Próxima ›</button></div>
+    </dialog>
     <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   </div>
 </body>

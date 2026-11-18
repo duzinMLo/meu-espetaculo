@@ -30,3 +30,14 @@ Site estático em três atos, com cenários desenhados em CSS, um envelope inter
 - Carrega fontes públicas do Google Fonts quando há acesso à internet; possui fontes locais de fallback
 
 **Importante:** no GitHub Pages, o repositório público expõe o código e os textos do site; não inclua informações privadas que não deseja publicar.
+
+
+## Atualização 2.0 — álbum de lembranças
+- A última tela agora inclui 8 fotografias em molduras retrô e um vídeo de ~29 segundos.
+- Clique nas fotos para ampliar; use as setas ou Escape para navegar/fechar.
+- O vídeo foi convertido para MP4 (H.264 + AAC) por compatibilidade com navegadores. Ele não toca automaticamente.
+- Os textos das três telas foram mantidos exatamente como na versão anterior.
+- Os arquivos de mídia ficam em `assets/fotos/` e `assets/video/`.
+- ATENÇÃO: GitHub Pages público expõe as imagens e o vídeo para qualquer pessoa com o link. Confirme que os retratados concordam com a publicação.
+- Para atualizar um site existente, substitua os arquivos e envie as novas pastas para o MESMO repositório; não é necessário mexer no Registro.br novamente.
+- Preserve `config.js` com o seu link real da playlist e preserve `CNAME`.

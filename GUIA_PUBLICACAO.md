@@ -80,3 +80,12 @@ Para atualizar textos, cores, link do Spotify ou decoração: edite o arquivo no
 - GitHub Pages — domínio personalizado: https://docs.github.com/pt/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 - GitHub Pages — HTTPS: https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https
 - Registro.br — gerenciamento DNS: https://registro.br/tecnologia/caracteristicas-tecnicas/
+
+
+## Publicar a versão 2.0 (fotos e vídeo)
+1. Abra o mesmo repositório do GitHub Pages já conectado ao domínio.
+2. Envie `index.html`, `style.css`, `script.js` atualizados e a pasta `assets` completa, incluindo `assets/fotos` e `assets/video`.
+3. **Não apague** `CNAME` e mantenha o endereço real da playlist em `config.js` (caso já o tenha configurado).
+4. Faça commit e aguarde a implantação do GitHub Pages. Não altere o DNS no Registro.br.
+5. Abra `https://meuespetaculo.com.br` em janela anônima e teste a galeria, o player e o Spotify.
+6. As mídias são públicas se o repositório/site é público. Obtenha autorização das pessoas retratadas antes de divulgar.
