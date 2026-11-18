@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#71936b">
+  <meta name="description" content="Meu Espetáculo — uma pequena história em três atos.">
+  <title>Meu Espetáculo ✦</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="config.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="site" id="site">
+    <div class="world" aria-hidden="true">
+      <div class="sky"><span class="sun"></span><span class="moon"></span><div class="stars" id="stars"></div><span class="cloud cloud-one"></span><span class="cloud cloud-two"></span></div>
+      <div class="hill hill-back"></div><div class="hill hill-front"></div>
+      <div class="cottage"><div class="chimney"></div><div class="roof"></div><div class="house"><span class="window"></span><span class="door"></span></div></div>
+      <div class="tree tree-left"><i></i><i></i><i></i></div><div class="tree tree-right"><i></i><i></i><i></i></div>
+      <div class="garden" id="garden"></div>
+      <div class="ground"></div>
+    </div>
+
+    <header class="site-header"><span class="tiny-star" aria-hidden="true">✦</span><span>UMA PEQUENA HISTÓRIA EM TRÊS ATOS</span><span class="tiny-star" aria-hidden="true">✦</span></header>
+
+    <main class="main" id="main">
+      <!-- TELA 1: textos originais preservados literalmente -->
+      <section class="scene is-current" id="scene-invite" aria-labelledby="invite-title" data-scene="0">
+        <div class="panel invitation">
+          <div class="ornament" aria-hidden="true">✿ &nbsp; ✦ &nbsp; ✿</div>
+          <p class="eyebrow">✧ O PRIMEIRO ATO ✧</p>
+          <h1 id="invite-title">Meu Espetáculo</h1>
+          <p class="subtitle">Uma mulher cuja beleza é bem mais profunda do que todos pensam</p>
+          <div class="divider-flower" aria-hidden="true">❀</div>
+          <p class="quote">Alguns espetáculos não acontecem em um palco e sim na periferia de Maringá</p>
+          <p class="quiet">Apenas um lembrete para que não possamos nos esquecer</p>
+          <button class="pixel-button" id="accept-btn" type="button">Aceitar o convite <span aria-hidden="true">➜</span></button>
+          <div class="panel-corners" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- TELA 2: o envelope é um controle real, não uma imagem clicável sem acessibilidade -->
+      <section class="scene" id="scene-letter" aria-labelledby="letter-title" data-scene="1" hidden>
+        <button class="back-button" id="back-letter" type="button" aria-label="Voltar ao convite"><span aria-hidden="true">‹</span> Voltar</button>
+        <div class="letter-area" id="letter-area">
+          <div class="envelope-stage" id="envelope-stage">
+            <p class="eyebrow envelope-heading">✦ VOCÊ RECEBEU UMA CARTA ✦</p>
+            <button class="envelope" id="open-envelope" type="button" aria-label="Abrir o envelope com selo de coração">
+              <span class="envelope-back"></span><span class="envelope-flap"></span><span class="envelope-front"></span><span class="wax-seal" aria-hidden="true">♥</span>
+            </button>
+            <p class="hint">Toque no envelope para abrir</p>
+          </div>
+          <article class="letter-panel" id="letter-panel" aria-labelledby="letter-title" hidden>
+            <div class="letter-symbol" aria-hidden="true">♥</div>
+            <h2 id="letter-title">Antes que as cortinas se abram...</h2>
+            <p>Há coisas que guardamos em silêncio. Não porque sejam pequenas, mas porque nem sempre encontramos as palavras certas para dizê-las.</p>
+            <p>Talvez esta seja apenas uma forma diferente de transformar alguns sentimentos em lembranças.</p>
+            <button class="pixel-button" id="continue-btn" type="button">Continuar <span aria-hidden="true">➜</span></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- TELA 3: textos originais preservados literalmente -->
+      <section class="scene" id="scene-music" aria-labelledby="music-title" data-scene="2" hidden>
+        <button class="back-button" id="back-music" type="button" aria-label="Voltar à carta"><span aria-hidden="true">‹</span> Voltar</button>
+        <div class="panel finale">
+          <div class="music-symbol" aria-hidden="true">♫</div>
+          <p class="eyebrow">✧ O ÚLTIMO ATO ✧</p>
+          <h2 id="music-title" tabindex="-1">A trilha sonora do meu espetáculo</h2>
+          <p class="quote">Se as palavras não foram suficientes, talvez algumas músicas consigam contar a nossa história.</p>
+          <button class="pixel-button music-button" type="button" id="spotify-btn">♫ &nbsp; Ouvir o que não consegui dizer</button>
+          <p class="signature">Com carinho, de alguém que quis tornar todos os momentos com você especiais</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span id="chapter-indicator">01 / 03</span><span class="footer-flower" aria-hidden="true">✿</span><span>MEU ESPETÁCULO</span></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </div>
+</body>
+</html>
